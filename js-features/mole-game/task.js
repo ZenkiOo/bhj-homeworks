@@ -51,5 +51,9 @@ document.addEventListener("click", (event) => {
   } else {
     lostCount++;
     lost.innerText = lostCount;
+    if (lostCount === 5) {
+      alert("Loolzer!");
+      clearScore();
+    }
   }
 });
