@@ -14,14 +14,17 @@
 document.addEventListener("click", (event) => {
   const target = event.target,
     activeMenu = document.querySelector(".menu.menu_sub.menu_active");
-  if (activeMenu) {
-    activeMenu.classList.remove("menu_active");
-  }
   if (target.classList.contains("menu__link")) {
     if (checkSubMenu(target)) {
       event.preventDefault();
       showSubMenu(target);
     }
+  }
+  if (activeMenu) {
+    activeMenu.classList.remove("menu_active");
+  }
+  if (activeMenu && target.classList.contains("menu__link")) {
+    activeMenu.classList.remove("menu_active");
   }
 });
 
