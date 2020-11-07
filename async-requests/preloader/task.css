@@ -14,8 +14,11 @@ body {
 }
 
 .loader {
-  width: 100px;
+  width: 30px;
   display: none;
+  position: absolute;
+  top: 25px;
+  left: 210px;
 }
 .loader_active {
   display: block;
